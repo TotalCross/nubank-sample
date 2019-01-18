@@ -1,12 +1,20 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import totalcross.io.IOException;
+import totalcross.sys.Vm;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
+import totalcross.ui.MaterialWindow;
+import totalcross.ui.Presenter;
+import totalcross.ui.SlidingWindow;
+import totalcross.ui.event.ControlEvent;
+import totalcross.ui.event.PressListener;
 import totalcross.ui.font.Font;
 import totalcross.ui.gfx.Color;
+import totalcross.ui.icon.Icon;
+import totalcross.ui.icon.MaterialIcons;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
@@ -55,6 +63,14 @@ public class Inicial extends Container {
 			Button login = new Button("Login", Button.BORDER_OUTLINED);
 			login.setForeColor(Color.getRGB(108, 37, 117));
 			cont.add(login, LEFT, AFTER + 20, FILL, PREFERRED);
+
+			Icon i = new Icon(MaterialIcons._CLOSE);
+
+			login.addPressListener((e) -> {
+				SlidingWindow info = new CPFMaterialWindow();
+				// info.setBarFont(Font.getFont("Lato Light", false, this.getFont().size));
+				info.popup();
+			});
 
 		} catch (IOException | ImageException e) {
 			// TODO Auto-generated catch block

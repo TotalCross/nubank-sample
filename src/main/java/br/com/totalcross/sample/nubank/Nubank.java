@@ -13,6 +13,12 @@ public class Nubank extends MainWindow{
 		Settings.uiAdjustmentsBasedOnFontHeight = true;
 	}
 	
+	static {
+		Settings.applicationId = "NUBK";
+		Settings.appVersion = "1.0.1";
+		Settings.iosCFBundleIdentifier = "com.totalcross.sample.nubank";
+	}
+	
 	public void initUI(){
 		SplashWindow sp;
 		Inicial inicial = new Inicial();
