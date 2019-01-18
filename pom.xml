@@ -9,7 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<totalcross.activation_key>5443444B314891CE3D2DD791</totalcross.activation_key>
+		<totalcross.activation_key>your key here</totalcross.activation_key>
 	</properties>
 
 	<dependencies>
@@ -81,7 +81,7 @@
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>
 								<argument>/m</argument>
-								<argument>/Users/brunoamuniz/Downloads/iOSCertificadosEnterpriseSoftSite</argument>
+								<argument>your apple certificate here</argument>
 							</arguments>
 						</configuration>
 					</execution>
