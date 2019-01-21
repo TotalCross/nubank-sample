@@ -7,26 +7,28 @@ import totalcross.sys.Settings;
 import totalcross.ui.MainWindow;
 import totalcross.ui.image.ImageException;
 
-public class Nubank extends MainWindow{
-	public Nubank(){
-		setUIStyle(Settings.Material);
+public class Nubank extends MainWindow {
+	public Nubank() {
+		super("Nubank Sample", NO_BORDER);
+
+		setUIStyle(Settings.MATERIAL_UI);
 		Settings.uiAdjustmentsBasedOnFontHeight = true;
 	}
-	
+
 	static {
 		Settings.applicationId = "NUBK";
 		Settings.appVersion = "1.0.1";
 		Settings.iosCFBundleIdentifier = "com.totalcross.sample.nubank";
 	}
-	
-	public void initUI(){
+
+	public void initUI() {
 		SplashWindow sp;
 		Inicial inicial = new Inicial();
 		try {
 			sp = new SplashWindow();
-			sp.popupNonBlocking();
+			// sp.popupNonBlocking();
 			swap(inicial);
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

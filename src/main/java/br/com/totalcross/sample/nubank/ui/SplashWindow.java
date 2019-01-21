@@ -26,7 +26,7 @@ public class SplashWindow extends Window {
 			add(back, LEFT, TOP, FILL, FILL);
 
 			// setBackColor(Color.getRGB(136, 47, 146));
-			logo = new ImageControl(new Image("images/ic_adaptive_launcher_shell_round.png"));
+			logo = new ImageControl(new Image("images/nubank_logo.png"));
 			logo.scaleToFit = true;
 			logo.centerImage = true;
 			logo.transparentBackground = true;
