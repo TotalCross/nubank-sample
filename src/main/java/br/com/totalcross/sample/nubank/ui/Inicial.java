@@ -1,16 +1,13 @@
 package br.com.totalcross.sample.nubank.ui;
 
-import totalcross.io.IOException;
-import totalcross.sys.Vm;
+import java.io.IOException;
+
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
-import totalcross.ui.MaterialWindow;
-import totalcross.ui.Presenter;
+import totalcross.ui.MainWindow;
 import totalcross.ui.SlidingWindow;
-import totalcross.ui.event.ControlEvent;
-import totalcross.ui.event.PressListener;
 import totalcross.ui.font.Font;
 import totalcross.ui.gfx.Color;
 import totalcross.ui.icon.Icon;
@@ -59,6 +56,10 @@ public class Inicial extends Container {
 			Button jac = new Button("Já Tenho Meu Convite", Button.BORDER_OUTLINED);
 			jac.setForeColor(Color.getRGB(108, 37, 117));
 			cont.add(jac, LEFT, AFTER + 20, FILL, PREFERRED);
+			jac.addPressListener((e)->{
+				Menu menu = new Menu();
+				MainWindow.getMainWindow().swap(menu);
+			});
 
 			Button login = new Button("Login", Button.BORDER_OUTLINED);
 			login.setForeColor(Color.getRGB(108, 37, 117));

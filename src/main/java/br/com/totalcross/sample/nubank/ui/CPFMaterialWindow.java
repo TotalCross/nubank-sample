@@ -1,7 +1,6 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import totalcross.ui.Bar;
-import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.Control;
 import totalcross.ui.Edit;
@@ -51,47 +50,21 @@ public class CPFMaterialWindow extends SlidingWindow {
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
 						cpfLabel.setFont(Font.getFont("Lato Light", false, this.getFont().size + 6));
 
-						add(cpfLabel, LEFT + 100, AFTER + 50, PREFERRED, Inicial.PREFERRED);
+						add(cpfLabel, LEFT + 150, AFTER + 50, PREFERRED, Inicial.PREFERRED);
 
 						Edit maskedEdit = new Edit("999.999.999-99");
-						Button btnOutlined = new Button("Continuar", Button.BORDER_OUTLINED);
-
 						maskedEdit.caption = "";
 						maskedEdit.setMode(Edit.NORMAL, true);
 						maskedEdit.setValidChars(Edit.numbersSet);
 						maskedEdit.transparentBackground = true;
-						maskedEdit.addPressListener(new PressListener() {
-
-							@Override
-							public void controlPressed(ControlEvent event) {
-								if (event.target == maskedEdit
-										&& maskedEdit.getText().length() == "999.999.999-99".length()) {
-									btnOutlined.setEnabled(true);
-									// TODO falta mudar a cor do botão quando preenche o campo todo
-									btnOutlined.setForeColor(Color.BLUE);
-									btnOutlined.repaintNow();
-								} else {
-									btnOutlined.setEnabled(false);
-									btnOutlined.setForeColor(Color.getRGB(204, 204, 204));
-									btnOutlined.repaintNow();
-								}
-
-							}
-						});
-
-						btnOutlined.setEnabled(false);
-
-						btnOutlined.setBackForeColors(Color.getRGB(204, 204, 204), Color.WHITE);
 
 						add(maskedEdit, SAME, AFTER + 50, PREFERRED, Inicial.PREFERRED);
-						add(btnOutlined, LEFT, AFTER + 100, FILL, PREFERRED);
 
 					}
 				};
 			}
 		});
 		transparentBackground = true;
-		fadeOtherWindows = true;
 
 		Font medium = Font.getFont("Roboto Medium", false, 20);
 		Icon i = new Icon(MaterialIcons._CLOSE);

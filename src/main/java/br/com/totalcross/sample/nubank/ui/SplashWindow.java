@@ -5,7 +5,6 @@ import totalcross.ui.ImageControl;
 import totalcross.ui.Window;
 import totalcross.ui.anim.ControlAnimation;
 import totalcross.ui.anim.FadeAnimation;
-import totalcross.ui.gfx.Color;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
@@ -26,12 +25,10 @@ public class SplashWindow extends Window {
 			add(back, LEFT, TOP, FILL, FILL);
 
 			// setBackColor(Color.getRGB(136, 47, 146));
-			logo = new ImageControl(new Image("images/nubank_logo.png"));
+			logo = new ImageControl(new Image("images/ic_adaptive_launcher_shell_round.png"));
 			logo.scaleToFit = true;
 			logo.centerImage = true;
 			logo.transparentBackground = true;
-			// logo.hwScale = true;
-			// logo.strechImage = true;
 			add(logo, CENTER, CENTER, PARENTSIZE + 50, PARENTSIZE + 50);
 
 			FadeAnimation.create(logo, true, null, 3000)
