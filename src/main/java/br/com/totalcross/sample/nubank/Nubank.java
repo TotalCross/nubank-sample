@@ -1,6 +1,7 @@
 package br.com.totalcross.sample.nubank;
 
 import br.com.totalcross.sample.nubank.ui.Inicial;
+import br.com.totalcross.sample.nubank.ui.Menu;
 import br.com.totalcross.sample.nubank.ui.SplashWindow;
 import totalcross.io.IOException;
 import totalcross.sys.Settings;
@@ -24,9 +25,10 @@ public class Nubank extends MainWindow{
 		Inicial inicial = new Inicial();
 		try {
 			sp = new SplashWindow();
-			sp.popupNonBlocking();
-			swap(inicial);
-			//swap(menu);
+			//sp.popupNonBlocking();
+			//swap(inicial);
+			Menu menu = new Menu();
+			swap(menu);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -7,9 +7,10 @@ import totalcross.ui.Label;
 import totalcross.ui.ScrollContainer;
 import totalcross.ui.TabbedContainer;
 import totalcross.ui.font.Font;
-import totalcross.ui.gfx.Color;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
+import util.Colors;
+import util.Images;
 
 public class Menu extends ScrollContainer{
 	private ImageControl background;
@@ -20,14 +21,14 @@ public class Menu extends ScrollContainer{
 	
 	public void initUI(){
 		try {
-			background = new ImageControl(new Image("images/ic_adaptive_launcher_shell_background.png"));
+			background = new ImageControl(Images.BACKGROUND);
 			background.scaleToFit = true;
 			background.centerImage = true;
 			background.hwScale = true;
 			background.strechImage = true;
 			add(background, LEFT, TOP, FILL, FILL);
 			
-			logo = new ImageControl(new Image("images/logo-nubank.png"));
+			logo = new ImageControl(Images.NU_LOGO);
 			logo.scaleToFit = true;
 			logo.transparentBackground = true;
 			add(logo, CENTER-112, TOP + 80, PARENTSIZE + 18, PARENTSIZE + 18);
@@ -35,14 +36,15 @@ public class Menu extends ScrollContainer{
 			nome = new Label("Pedro");
 			nome.setFont(Font.getFont("Lato Bold", false, this.getFont().size + 2));
 			nome.transparentBackground = true;
-			nome.setForeColor(Color.WHITE);
+			nome.setForeColor(Colors.WHITE);
 			add(nome, AFTER+10, TOP + 100);
 			
+			//Container do centro
 			cont = new Container();
 			cont.setBackColor(0xF8F8FF);
 			add(cont, LEFT+100, CENTER-160, FILL-100, PARENTSIZE+48);
 			
-			cartao = new ImageControl(new Image("images/ic_docs_front_purpleheart.png"));
+			cartao = new ImageControl(Images.CARD);
 			cartao.scaleToFit = true;
 			cartao.centerImage = true;
 			cont.add(cartao, LEFT+50, TOP+50, PARENTSIZE+10, PARENTSIZE+10);
@@ -62,20 +64,40 @@ public class Menu extends ScrollContainer{
 			Label lbl3 = new Label("Limite disponível:");
 			lbl3.transparentBackground = true;
 			lbl3.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
-			lbl3.setForeColor(Color.BLACK);  //0x00BFFF
+			lbl3.setForeColor(Colors.BLACK);  //0x00BFFF
 			cont.add(lbl3, LEFT+50, AFTER);
 			
 			Label lbl4 = new Label("R$ 228,52");
 			lbl4.transparentBackground = true;
 			lbl4.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
 			lbl4.setForeColor(0XF4C430);  //0x00BFFF
-			cont.add(lbl4, AFTER+10, CENTER+25);
+			cont.add(lbl4, RIGHT-180, CENTER+25);
 			
+			Container cinza = new Container();
+			cinza.setBackColor(0xDCDCDC);
+			cont.add(cinza, LEFT, BOTTOM, FILL, PARENTSIZE+25);
+			
+			ImageControl cart = new ImageControl(new Image("images/cart.png"));
+			cart.scaleToFit = true;
+			cart.transparentBackground = true;
+			cinza.add(cart, LEFT+50, CENTER, PARENTSIZE+36, PARENTSIZE+40);
+			
+			Label lblcinza = new Label("Compra mais recente em Supermercado \n"
+					+ "São Luiz no valor de R$31,84 ontem");
+			lblcinza.setFont(Font.getFont("Lato Regular", false, this.getFont().size -5));
+			lblcinza.transparentBackground = true;
+			cinza.add(lblcinza, LEFT+330, TOP+75, PARENTSIZE+73, PARENTSIZE+65);
+			
+			ImageControl seta = new ImageControl(new Image("images/slider-next.png"));
+			seta.scaleToFit = true;
+			seta.transparentBackground = true;
+			cinza.add(seta, AFTER, CENTER, PARENTSIZE+40, PARENTSIZE+30, lblcinza);
 			
 			//ScrollContainer
 			ScrollContainer sc = new ScrollContainer(true, false);
 			sc.transparentBackground = true;
 			add(sc, LEFT+100, BOTTOM-100, FILL-100, PARENTSIZE+20);
+			
 			
 			Image img = new Image("images/addperson.png");
 			cd1 = new Card(img, "Indicar \namigos");
