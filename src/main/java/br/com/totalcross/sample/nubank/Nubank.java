@@ -25,10 +25,10 @@ public class Nubank extends MainWindow{
 		Inicial inicial = new Inicial();
 		try {
 			sp = new SplashWindow();
-			//sp.popupNonBlocking();
-			//swap(inicial);
-			Menu menu = new Menu();
-			swap(menu);
+			sp.popupNonBlocking();
+			swap(inicial);
+//			Menu menu = new Menu();
+//			swap(menu);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

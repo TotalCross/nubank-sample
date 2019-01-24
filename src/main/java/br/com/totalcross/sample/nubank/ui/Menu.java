@@ -1,5 +1,6 @@
 package br.com.totalcross.sample.nubank.ui;
 
+import br.com.totalcross.sample.nubank.util.Colors;
 import totalcross.io.IOException;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
@@ -9,8 +10,6 @@ import totalcross.ui.TabbedContainer;
 import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
-import util.Colors;
-import util.Images;
 
 public class Menu extends ScrollContainer{
 	private ImageControl background;
@@ -21,14 +20,14 @@ public class Menu extends ScrollContainer{
 	
 	public void initUI(){
 		try {
-			background = new ImageControl(Images.BACKGROUND);
+			background = new ImageControl(new Image("images/ic_adaptive_launcher_shell_background.png"));
 			background.scaleToFit = true;
 			background.centerImage = true;
 			background.hwScale = true;
 			background.strechImage = true;
 			add(background, LEFT, TOP, FILL, FILL);
 			
-			logo = new ImageControl(Images.NU_LOGO);
+			logo = new ImageControl(new Image("images/logo-nubank.png"));
 			logo.scaleToFit = true;
 			logo.transparentBackground = true;
 			add(logo, CENTER-112, TOP + 80, PARENTSIZE + 18, PARENTSIZE + 18);
@@ -44,7 +43,7 @@ public class Menu extends ScrollContainer{
 			cont.setBackColor(0xF8F8FF);
 			add(cont, LEFT+100, CENTER-160, FILL-100, PARENTSIZE+48);
 			
-			cartao = new ImageControl(Images.CARD);
+			cartao = new ImageControl(new Image("images/ic_docs_front_purpleheart.png"));
 			cartao.scaleToFit = true;
 			cartao.centerImage = true;
 			cont.add(cartao, LEFT+50, TOP+50, PARENTSIZE+10, PARENTSIZE+10);

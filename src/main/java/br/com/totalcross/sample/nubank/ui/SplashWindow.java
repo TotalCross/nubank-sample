@@ -5,8 +5,8 @@ import totalcross.ui.ImageControl;
 import totalcross.ui.Window;
 import totalcross.ui.anim.ControlAnimation;
 import totalcross.ui.anim.FadeAnimation;
+import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
-import util.Images;
 
 public class SplashWindow extends Window {
 
@@ -16,22 +16,28 @@ public class SplashWindow extends Window {
 
 	protected void onPopup() {
 		ImageControl logo, back;
-		back = new ImageControl(Images.BACKGROUND);
-		back.scaleToFit = true;
-		back.centerImage = true;
-		back.hwScale = true;
-		back.strechImage = true;
-		add(back, LEFT, TOP, FILL, FILL);
+		try {
+			back = new ImageControl(new Image("images/ic_adaptive_launcher_shell_background.png"));
+			back.scaleToFit = true;
+			back.centerImage = true;
+			back.hwScale = true;
+			back.strechImage = true;
+			add(back, LEFT, TOP, FILL, FILL);
 
-		logo = new ImageControl(Images.NU_LOGO_ROUNDED);
-		logo.scaleToFit = true;
-		logo.centerImage = true;
-		logo.transparentBackground = true;
-		add(logo, CENTER, CENTER, PARENTSIZE + 50, PARENTSIZE + 50);
+			logo = new ImageControl(new Image("images/ic_adaptive_launcher_shell_round.png"));
+			logo.scaleToFit = true;
+			logo.centerImage = true;
+			logo.transparentBackground = true;
+			add(logo, CENTER, CENTER, PARENTSIZE + 50, PARENTSIZE + 50);
 
-		FadeAnimation.create(logo, true, null, 3000)
-				.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
+			FadeAnimation.create(logo, true, null, 3000)
+					.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
 
+		} catch (IOException | ImageException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void onAnimationFinished(ControlAnimation anim) {
