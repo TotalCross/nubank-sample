@@ -1,5 +1,7 @@
 package br.com.totalcross.sample.nubank.ui;
 
+
+import br.com.totalcross.sample.nubank.util.Colors;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
@@ -19,7 +21,9 @@ public class Card extends Container{
 		}
 		
 		public void initUI(){
-			setBackColor(0xa140b3);
+			this.setBackColor(Colors.SCROLL);
+			this.setBorderStyle(BORDER_ROUNDED);
+			this.borderColor = (Colors.SCROLL);
 			
 			ic = new ImageControl(img);
 			ic.transparentBackground = true;

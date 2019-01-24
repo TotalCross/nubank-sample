@@ -100,27 +100,27 @@ public class Menu extends ScrollContainer{
 			
 			Image img = new Image("images/addperson.png");
 			cd1 = new Card(img, "Indicar \namigos");
-			sc.add(cd1, LEFT, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd1, LEFT, TOP, PARENTSIZE+38, FILL-25);
 			
 			Image img2 = new Image("images/addperson.png");
 			cd2 = new Card(img2, "Cobrar");
-			sc.add(cd2, AFTER+30, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd2, AFTER+25, TOP, PARENTSIZE+38, FILL-25);
 			
 			Image img3 = new Image("images/addperson.png");
 			cd3 = new Card(img3, "Depositar");
-			sc.add(cd3, AFTER+30, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd3, AFTER+25, TOP, PARENTSIZE+38, FILL-25);
 		
 			Image img4 = new Image("images/addperson.png");
 			cd4 = new Card(img4, "Transferir");
-			sc.add(cd4, AFTER+30, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd4, AFTER+25, TOP, PARENTSIZE+38, FILL-25);
 			
 			Image img5 = new Image("images/addperson.png");
 			cd5 = new Card(img5, "Outra \nopção");
-			sc.add(cd5, AFTER+30, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd5, AFTER+25, TOP, PARENTSIZE+38, FILL-25);
 			
 			Image img6 = new Image("images/addperson.png");
 			cd6 = new Card(img6, "Outra \nopção");
-			sc.add(cd6, AFTER+30, TOP, PARENTSIZE+38, FILL);
+			sc.add(cd6, AFTER+25, TOP, PARENTSIZE+38, FILL-25);
 		} catch (IOException | ImageException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
