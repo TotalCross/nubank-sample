@@ -6,16 +6,17 @@ import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 import totalcross.ui.ScrollContainer;
+import totalcross.ui.TabbedContainer;
 import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
 public class Menu extends ScrollContainer {
+	private String[] tits = {"",""}; 
 	private ImageControl background;
-	private ImageControl logo, cartao;
+	private ImageControl logo;
 	private Label nome;
 	private Card cd1, cd2, cd3, cd4, cd5, cd6;
-	private Container cont;
 
 	public void initUI() {
 		try {
@@ -38,87 +39,59 @@ public class Menu extends ScrollContainer {
 			add(nome, AFTER + 10, TOP + 100);
 
 			// Container do centro
-			cont = new Container();
-			cont.setBackColor(0xF8F8FF);
-			add(cont, LEFT + 100, CENTER - 160, FILL - 100, PARENTSIZE + 48);
+			Container center = new Container();
+			add(center, LEFT + 100, CENTER - 180, FILL - 100, PARENTSIZE + 48);
+			
+			TabbedContainer tc = new TabbedContainer(tits);
+			center.add(tc,LEFT,CENTER, FILL, PARENTSIZE);
 
-			cartao = new ImageControl(new Image("images/ic_docs_front_purpleheart.png"));
-			cartao.scaleToFit = true;
-			cartao.centerImage = true;
-			cont.add(cartao, LEFT + 50, TOP + 50, PARENTSIZE + 10, PARENTSIZE + 10);
-
-			Label lbl1 = new Label("Fatura Atual:");
-			lbl1.transparentBackground = true;
-			lbl1.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
-			lbl1.setForeColor(0x0092d1); // 0x00BFFF
-			cont.add(lbl1, LEFT + 50, AFTER + 150);
-
-			Label lbl2 = new Label("R$ 2.148,98");
-			lbl2.transparentBackground = true;
-			lbl2.setFont(Font.getFont("Lato Bold", false, this.getFont().size + 7));
-			lbl2.setForeColor(0x0092d1); // 0x00BFFF
-			cont.add(lbl2, LEFT + 50, AFTER);
-
-			Label lbl3 = new Label("Limite disponível:");
-			lbl3.transparentBackground = true;
-			lbl3.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
-			lbl3.setForeColor(Colors.BLACK); // 0x00BFFF
-			cont.add(lbl3, LEFT + 50, AFTER);
-
-			Label lbl4 = new Label("R$ 228,52");
-			lbl4.transparentBackground = true;
-			lbl4.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
-			lbl4.setForeColor(0XF4C430); // 0x00BFFF
-			cont.add(lbl4, AFTER + 50, SAME);
-
-			Container cinza = new Container();
-			cinza.setBackColor(0xDCDCDC);
-			cont.add(cinza, LEFT, BOTTOM, FILL, PARENTSIZE + 25);
-
-			ImageControl cart = new ImageControl(new Image("images/cart.png"));
-			cart.scaleToFit = true;
-			cart.transparentBackground = true;
-			cinza.add(cart, LEFT + 50, CENTER, PARENTSIZE + 10, PARENTSIZE + 40);
-
-			Label lblcinza = new Label("Compra mais recente em Supermercado \n" + "São Luiz no valor de R$31,84 ontem");
-			lblcinza.setFont(Font.getFont("Lato Regular", false, this.getFont().size - 5));
-			lblcinza.transparentBackground = true;
-			//lblcinza.align = Label.CENTER;
-			cinza.add(lblcinza, AFTER + 50, TOP, PARENTSIZE + 70, FILL);
-
-			ImageControl seta = new ImageControl(new Image("images/slider-next.png"));
-			seta.scaleToFit = true;
-			seta.transparentBackground = true;
-			cinza.add(seta, RIGHT, CENTER, PARENTSIZE + 10, PARENTSIZE + 40);
-
+			tc.setContainer(0,new FaturaContainer());
+			tc.setContainer(1, new PontosContainer());
+			tc.setActiveTab(0);
+			tc.transparentBackground = true;
+			
+			Image circulo = new Image("images/circulo-cinza-.png");
+			
+			ImageControl b1 = new ImageControl(circulo);
+			b1.transparentBackground = true;
+			b1.centerImage = true;
+			b1.scaleToFit = true;
+			add(b1, CENTER-20, AFTER+10, PARENTSIZE+2, PARENTSIZE+2);
+			
+			ImageControl b2 = new ImageControl(circulo);
+			b2.transparentBackground = true;
+			b2.centerImage = true;
+			b2.scaleToFit = true;
+			add(b2, AFTER+15, SAME, PARENTSIZE+2, PARENTSIZE+2);
+			
+			
 			// ScrollContainer
 			ScrollContainer sc = new ScrollContainer(true, false);
 			sc.transparentBackground = true;
 			add(sc, LEFT + 100, BOTTOM - 100, FILL - 100, PARENTSIZE + 20);
 
-			Image img = new Image("images/addperson.png");
-			cd1 = new Card(img, "Indicar \namigos");
+			Image add = new Image("images/icone_adicionar-.png");
+			Image cobrar = new Image("images/icone-dinheiro-cobrar.png");
+			Image depositar = new Image("images/icone-dinheiro-down.png");
+			
+			cd1 = new Card(add, "Indicar \namigos");
 			sc.add(cd1, LEFT, TOP, PARENTSIZE + 38, FILL - 25);
 
-			Image img2 = new Image("images/addperson.png");
-			cd2 = new Card(img2, "Cobrar");
+			cd2 = new Card(cobrar, "Cobrar");
 			sc.add(cd2, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
 
-			Image img3 = new Image("images/addperson.png");
-			cd3 = new Card(img3, "Depositar");
+			cd3 = new Card(depositar, "Depositar");
 			sc.add(cd3, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
 
-			Image img4 = new Image("images/addperson.png");
-			cd4 = new Card(img4, "Transferir");
+			cd4 = new Card(depositar, "Transferir");
 			sc.add(cd4, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
 
-			Image img5 = new Image("images/addperson.png");
-			cd5 = new Card(img5, "Outra \nopção");
+			cd5 = new Card(depositar, "Outra \nopção");
 			sc.add(cd5, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
 
-			Image img6 = new Image("images/addperson.png");
-			cd6 = new Card(img6, "Outra \nopção");
+			cd6 = new Card(depositar, "Outra \nopção");
 			sc.add(cd6, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
+			
 		} catch (IOException | ImageException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
