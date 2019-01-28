@@ -21,7 +21,6 @@ import totalcross.ui.icon.MaterialIcons;
 public class CPFMaterialWindow extends SlidingWindow {
 
 	private Bar bar;
-	private static int backcolor = 0;
 
 	private SideMenuContainer findSideMenu(Container c) {
 		if (c instanceof SideMenuContainer) {
@@ -47,7 +46,6 @@ public class CPFMaterialWindow extends SlidingWindow {
 				return new Container() {
 					@Override
 					public void initUI() {
-						backcolor = getBackColor();
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
 						cpfLabel.setFont(Font.getFont("Lato Light", false, this.getFont().size + 6));
 

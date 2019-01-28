@@ -12,7 +12,7 @@ import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
 public class Menu extends ScrollContainer {
-	private String[] tits = {"",""}; 
+	private String[] tits = { "", "" };
 	private ImageControl background;
 	private ImageControl logo;
 	private Label nome;
@@ -41,30 +41,29 @@ public class Menu extends ScrollContainer {
 			// Container do centro
 			Container center = new Container();
 			add(center, LEFT + 100, CENTER - 180, FILL - 100, PARENTSIZE + 48);
-			
-			TabbedContainer tc = new TabbedContainer(tits);
-			center.add(tc,LEFT,CENTER, FILL, PARENTSIZE);
 
-			tc.setContainer(0,new FaturaContainer());
+			TabbedContainer tc = new TabbedContainer(tits);
+			center.add(tc, LEFT, CENTER, FILL, PARENTSIZE);
+
+			tc.setContainer(0, new FaturaContainer());
 			tc.setContainer(1, new PontosContainer());
 			tc.setActiveTab(0);
 			tc.transparentBackground = true;
-			
+
 			Image circulo = new Image("images/circulo-cinza-.png");
-			
+
 			ImageControl b1 = new ImageControl(circulo);
 			b1.transparentBackground = true;
 			b1.centerImage = true;
 			b1.scaleToFit = true;
-			add(b1, CENTER-20, AFTER+10, PARENTSIZE+2, PARENTSIZE+2);
-			
+			add(b1, CENTER - 20, AFTER + 10, PARENTSIZE + 2, PARENTSIZE + 2);
+
 			ImageControl b2 = new ImageControl(circulo);
 			b2.transparentBackground = true;
 			b2.centerImage = true;
 			b2.scaleToFit = true;
-			add(b2, AFTER+15, SAME, PARENTSIZE+2, PARENTSIZE+2);
-			
-			
+			add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
+
 			// ScrollContainer
 			ScrollContainer sc = new ScrollContainer(true, false);
 			sc.transparentBackground = true;
@@ -73,7 +72,7 @@ public class Menu extends ScrollContainer {
 			Image add = new Image("images/icone_adicionar-.png");
 			Image cobrar = new Image("images/icone-dinheiro-cobrar.png");
 			Image depositar = new Image("images/icone-dinheiro-down.png");
-			
+
 			cd1 = new Card(add, "Indicar \namigos");
 			sc.add(cd1, LEFT, TOP, PARENTSIZE + 38, FILL - 25);
 
@@ -91,7 +90,7 @@ public class Menu extends ScrollContainer {
 
 			cd6 = new Card(depositar, "Outra \nopção");
 			sc.add(cd6, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
-			
+
 		} catch (IOException | ImageException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

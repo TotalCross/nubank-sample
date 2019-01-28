@@ -1,6 +1,5 @@
 package br.com.totalcross.sample.nubank.ui;
 
-
 import br.com.totalcross.sample.nubank.util.Colors;
 import totalcross.io.IOException;
 import totalcross.ui.Button;
@@ -54,7 +53,7 @@ public class Inicial extends Container {
 			Button jac = new Button("Já Tenho Meu Convite", Button.BORDER_OUTLINED);
 			jac.setForeColor(Colors.PURPLE_BUTTONS);
 			cont.add(jac, LEFT, AFTER + 20, FILL, PREFERRED);
-			jac.addPressListener((e)->{
+			jac.addPressListener((e) -> {
 				Menu menu = new Menu();
 				MainWindow.getMainWindow().swap(menu);
 			});
@@ -63,16 +62,12 @@ public class Inicial extends Container {
 			login.setForeColor(Colors.PURPLE_BUTTONS);
 			cont.add(login, LEFT, AFTER + 20, FILL, PREFERRED);
 
-			//Icon i = new Icon(MaterialIcons._CLOSE);
-
 			login.addPressListener((e) -> {
 				SlidingWindow info = new CPFMaterialWindow();
-				// info.setBarFont(Font.getFont("Lato Light", false, this.getFont().size));
 				info.popup();
 			});
 
 		} catch (IOException | ImageException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 

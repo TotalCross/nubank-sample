@@ -9,16 +9,16 @@ import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
-public class PontosContainer extends Container{
+public class PontosContainer extends Container {
 	private ImageControl gift, seta;
 	private Label lbl2, lbl3, lbl4, lblcinza;
 	private Container cinza;
 
-	public PontosContainer(){
+	public PontosContainer() {
 		this.setBackColor(Colors.MIDDLE_CONTAINER_BACKGROUND);
 	}
-	
-	public void initUI(){
+
+	public void initUI() {
 		try {
 
 			gift = new ImageControl(new Image("images/presente-icone.png"));
@@ -43,19 +43,18 @@ public class PontosContainer extends Container{
 			lbl4.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
 			lbl4.setForeColor(Colors.PURPLE_TEXT); // 0x00BFFF
 			add(lbl4, AFTER + 20, SAME);
-			
+
 			lbl3 = new Label("nos ultimos 30 dias");
 			lbl3.transparentBackground = true;
 			lbl3.setFont(Font.getFont("Lato Medium", false, this.getFont().size + 1));
 			lbl3.setForeColor(Colors.BLACK); // 0x00BFFF
-			add(lbl3, LEFT+50, AFTER);
+			add(lbl3, LEFT + 50, AFTER);
 
 			cinza = new Container();
 			cinza.setBackColor(0xDCDCDC);
 			add(cinza, LEFT, BOTTOM, FILL, PARENTSIZE + 25);
-			
-			lblcinza = new Label("Você ainda não tem compras para pagar \n"
-					+ "com pontos");
+
+			lblcinza = new Label("Você ainda não tem compras para pagar \n" + "com pontos");
 			lblcinza.setFont(Font.getFont("Lato Regular", false, this.getFont().size - 5));
 			lblcinza.transparentBackground = true;
 			cinza.add(lblcinza, LEFT + 50, TOP, PARENTSIZE + 73, FILL);
@@ -66,7 +65,6 @@ public class PontosContainer extends Container{
 			cinza.add(seta, RIGHT, CENTER, PARENTSIZE + 10, PARENTSIZE + 40);
 
 		} catch (IOException | ImageException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

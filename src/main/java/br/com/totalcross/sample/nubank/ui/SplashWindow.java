@@ -34,10 +34,9 @@ public class SplashWindow extends Window {
 					.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
 
 		} catch (IOException | ImageException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	public void onAnimationFinished(ControlAnimation anim) {

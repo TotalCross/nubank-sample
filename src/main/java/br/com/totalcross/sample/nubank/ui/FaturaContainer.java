@@ -9,16 +9,16 @@ import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
-public class FaturaContainer extends Container{
+public class FaturaContainer extends Container {
 	private ImageControl cartao, cart, seta;
 	private Label lbl1, lbl2, lbl3, lbl4, lblcinza;
 	private Container cinza;
-	
-	public FaturaContainer(){
+
+	public FaturaContainer() {
 		this.setBackColor(Colors.MIDDLE_CONTAINER_BACKGROUND);
 	}
-	
-	public void initUI(){
+
+	public void initUI() {
 		try {
 
 			cartao = new ImageControl(new Image("images/ic_docs_front_purpleheart.png"));
@@ -53,7 +53,7 @@ public class FaturaContainer extends Container{
 			cinza = new Container();
 			cinza.setBackColor(0xDCDCDC);
 			add(cinza, LEFT, BOTTOM, FILL, PARENTSIZE + 25);
-			
+
 			cart = new ImageControl(new Image("images/cart.png"));
 			cart.scaleToFit = true;
 			cart.transparentBackground = true;
@@ -68,7 +68,6 @@ public class FaturaContainer extends Container{
 			seta.scaleToFit = true;
 			seta.transparentBackground = true;
 			cinza.add(seta, RIGHT, CENTER, PARENTSIZE + 10, PARENTSIZE + 40);
-
 
 		} catch (IOException | ImageException e) {
 			// TODO Auto-generated catch block
