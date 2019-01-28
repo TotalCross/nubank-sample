@@ -6,7 +6,7 @@
 	<artifactId>Nubank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Nubank</name>
-	<description>Prototipo das telas da Gekom com Totalcross</description>
+	<description>Prototype of Nubank Sample app</description>
 
 
 	<properties>
@@ -85,7 +85,7 @@
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>
 								<argument>/m</argument>
-								<argument>C:\Users\TotalCross\Downloads\iOSCertificadosEnterpriseSoftSite</argument>
+								<argument>IOS_CERTIFICATE_PATH</argument>
 							</arguments>
 						</configuration>
 					</execution>
