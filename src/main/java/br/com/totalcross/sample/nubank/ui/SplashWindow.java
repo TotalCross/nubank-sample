@@ -15,28 +15,26 @@ public class SplashWindow extends Window {
 	}
 
 	protected void onPopup() {
+		NubankImages.loadImages(fmH);
 		ImageControl logo, back;
-		try {
-			back = new ImageControl(new Image("images/ic_adaptive_launcher_shell_background.png"));
-			back.scaleToFit = true;
-			back.centerImage = true;
-			back.hwScale = true;
-			back.strechImage = true;
-			add(back, LEFT, TOP, FILL, FILL);
+		
+		back = new ImageControl(NubankImages.ic_adaptive_launcher_shell_background_retang);
+		back.scaleToFit = true;
+		back.centerImage = true;
+		back.hwScale = true;
+		back.strechImage = true;
+		add(back, LEFT, TOP, FILL, FILL);
 
-			logo = new ImageControl(new Image("images/ic_adaptive_launcher_shell_round.png"));
-			logo.scaleToFit = true;
-			logo.centerImage = true;
-			logo.transparentBackground = true;
-			add(logo, CENTER, CENTER, PARENTSIZE + 50, PARENTSIZE + 50);
+		logo = new ImageControl(NubankImages.ic_adaptive_launcher_shell_background_circ);
+		logo.scaleToFit = true;
+		logo.centerImage = true;
+		logo.transparentBackground = true;
+		add(logo, CENTER, CENTER, PARENTSIZE + 50, PARENTSIZE + 50);
 
-			FadeAnimation.create(logo, true, null, 3000)
-					.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
+		FadeAnimation.create(logo, true, null, 3000)
+				.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
 
-		} catch (IOException | ImageException e) {
-			e.printStackTrace();
-		}
-
+		
 	}
 
 	public void onAnimationFinished(ControlAnimation anim) {

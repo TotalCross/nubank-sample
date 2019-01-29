@@ -1,7 +1,6 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
-import totalcross.io.IOException;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
@@ -10,7 +9,7 @@ import totalcross.ui.MainWindow;
 import totalcross.ui.SlidingWindow;
 import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
-import totalcross.ui.image.ImageException;
+
 
 public class Inicial extends Container {
 	private Container back;
@@ -20,56 +19,55 @@ public class Inicial extends Container {
 	}
 
 	public void initUI() {
+		NubankImages.loadImages(fmH);
 		back = new Container();
 		add(back, LEFT, TOP, FILL, FILL);
 
-		try {
-			girl = new ImageControl(new Image("images/fundo3.png"));
-			girl.scaleToFit = true;
-			girl.centerImage = true;
-			girl.hwScale = true;
-			girl.strechImage = true;
-			back.add(girl, LEFT, TOP, FILL, FILL);
+		
+		girl = new ImageControl(NubankImages.fundo3);
+		girl.scaleToFit = true;
+		girl.centerImage = true;
+		girl.hwScale = true;
+		girl.strechImage = true;
+		back.add(girl, LEFT, TOP, FILL, FILL);
 
-			logon = new ImageControl(new Image("images/logo-nubank-branca.png"));
-			logon.scaleToFit = true;
-			logon.transparentBackground = true;
-			back.add(logon, LEFT + 150, TOP + 80, PARENTSIZE + 30, PARENTSIZE + 20);
+		logon = new ImageControl(NubankImages.logo_nubank_branca);
+		logon.scaleToFit = true;
+		logon.transparentBackground = true;
+		back.add(logon, LEFT + 150, TOP + 80, PARENTSIZE + 30, PARENTSIZE + 20);
 
-			Container cont = new Container();
-			cont.transparentBackground = true;
-			back.add(cont, LEFT + 150, BOTTOM, FILL - 150, PARENTSIZE + 50);
+		Container cont = new Container();
+		cont.transparentBackground = true;
+		back.add(cont, LEFT + 150, BOTTOM, FILL - 150, PARENTSIZE + 50);
 
-			Label lbl = new Label("A forma mais \nsimples de lidar \ncom seus gastos.");
-			lbl.setFont(Font.getFont("Lato Bold", false, this.getFont().size + 6));
-			lbl.transparentBackground = true;
-			lbl.setForeColor(Colors.WHITE);
-			cont.add(lbl, LEFT, TOP + 15);
+		Label lbl = new Label("A forma mais \nsimples de lidar \ncom seus gastos.");
+		lbl.setFont(Font.getFont("Lato Bold", false, this.getFont().size + 6));
+		lbl.transparentBackground = true;
+		lbl.setForeColor(Colors.WHITE);
+		cont.add(lbl, LEFT, TOP + 15);
 
-			Button pedirc = new Button("Pedir Meu Convite");
-			pedirc.setBackForeColors(Colors.WHITE, Colors.PURPLE_BUTTONS);
-			cont.add(pedirc, LEFT, AFTER + 60, FILL, PREFERRED);
+		Button pedirc = new Button("Pedir Meu Convite");
+		pedirc.setBackForeColors(Colors.WHITE, Colors.PURPLE_BUTTONS);
+		cont.add(pedirc, LEFT, AFTER + 60, FILL, PREFERRED);
 
-			Button jac = new Button("Já Tenho Meu Convite", Button.BORDER_OUTLINED);
-			jac.setForeColor(Colors.PURPLE_BUTTONS);
-			cont.add(jac, LEFT, AFTER + 20, FILL, PREFERRED);
-			jac.addPressListener((e) -> {
-				Menu menu = new Menu();
-				MainWindow.getMainWindow().swap(menu);
-			});
+		Button jac = new Button("Já Tenho Meu Convite", Button.BORDER_OUTLINED);
+		jac.setForeColor(Colors.PURPLE_BUTTONS);
+		cont.add(jac, LEFT, AFTER + 20, FILL, PREFERRED);
+		jac.addPressListener((e) -> {
+			Menu menu = new Menu();
+			MainWindow.getMainWindow().swap(menu);
+		});
 
-			Button login = new Button("Login", Button.BORDER_OUTLINED);
-			login.setForeColor(Colors.PURPLE_BUTTONS);
-			cont.add(login, LEFT, AFTER + 20, FILL, PREFERRED);
+		Button login = new Button("Login", Button.BORDER_OUTLINED);
+		login.setForeColor(Colors.PURPLE_BUTTONS);
+		cont.add(login, LEFT, AFTER + 20, FILL, PREFERRED);
 
-			login.addPressListener((e) -> {
-				SlidingWindow info = new CPFMaterialWindow();
-				info.popup();
-			});
+		login.addPressListener((e) -> {
+			SlidingWindow info = new CPFMaterialWindow();
+			info.popup();
+		});
 
-		} catch (IOException | ImageException e1) {
-			e1.printStackTrace();
-		}
+		
 
 	}
 }
