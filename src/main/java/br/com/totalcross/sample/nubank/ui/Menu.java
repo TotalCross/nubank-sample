@@ -7,6 +7,9 @@ import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 import totalcross.ui.ScrollContainer;
 import totalcross.ui.TabbedContainer;
+import totalcross.ui.event.DragEvent;
+import totalcross.ui.event.PenEvent;
+import totalcross.ui.event.PenListener;
 import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
@@ -51,20 +54,95 @@ public class Menu extends ScrollContainer {
 		tc.setActiveTab(0);
 		tc.transparentBackground = true;
 
-		Image circulo = NubankImages.circulo_cinza;
-
-		ImageControl b1 = new ImageControl(circulo);
+	
+		ImageControl b1 = new ImageControl(NubankImages.circulo_cinza);
 		b1.transparentBackground = true;
 		b1.centerImage = true;
 		b1.scaleToFit = true;
+		
 		add(b1, CENTER - 20, AFTER + 10, PARENTSIZE + 2, PARENTSIZE + 2);
+		
+		
+		
 
-		ImageControl b2 = new ImageControl(circulo);
+		ImageControl b2 = new ImageControl(NubankImages.circulo_branco);
 		b2.transparentBackground = true;
 		b2.centerImage = true;
 		b2.scaleToFit = true;
+		b1.addPenListener(new PenListener() {
+			
+			@Override
+			public void penUp(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				System.out.println("teste1");
+				tc.setActiveTab(0);
+				b1.setImage(NubankImages.circulo_cinza);
+				b2.setImage(NubankImages.circulo_branco);
+			}
+			
+			@Override
+			public void penDragStart(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDragEnd(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDrag(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDown(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		b2.addPenListener(new PenListener() {
+			
+			@Override
+			public void penUp(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				System.out.println("teste2");
+				tc.setActiveTab(1);
+				b2.setImage(NubankImages.circulo_cinza);
+				b1.setImage(NubankImages.circulo_branco);
+			}
+			
+			@Override
+			public void penDragStart(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDragEnd(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDrag(DragEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void penDown(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
-
+		
+		
+		
 		// ScrollContainer
 		ScrollContainer sc = new ScrollContainer(true, false);
 		sc.transparentBackground = true;
