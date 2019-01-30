@@ -1,6 +1,8 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
+import br.com.totalcross.sample.nubank.util.NubankImages;
+
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
@@ -8,7 +10,6 @@ import totalcross.ui.Label;
 import totalcross.ui.MainWindow;
 import totalcross.ui.SlidingWindow;
 import totalcross.ui.font.Font;
-import totalcross.ui.image.Image;
 
 
 public class Inicial extends Container {

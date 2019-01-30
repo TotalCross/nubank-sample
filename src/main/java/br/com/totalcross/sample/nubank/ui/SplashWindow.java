@@ -1,11 +1,12 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import totalcross.io.IOException;
+import br.com.totalcross.sample.nubank.util.NubankImages;
+
 import totalcross.ui.ImageControl;
 import totalcross.ui.Window;
 import totalcross.ui.anim.ControlAnimation;
 import totalcross.ui.anim.FadeAnimation;
-import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
 public class SplashWindow extends Window {

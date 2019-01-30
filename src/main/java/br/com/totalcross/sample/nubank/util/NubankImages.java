@@ -1,4 +1,4 @@
-package br.com.totalcross.sample.nubank.ui;
+package br.com.totalcross.sample.nubank.util;
 
 import totalcross.io.IOException;
 import totalcross.ui.image.Image;

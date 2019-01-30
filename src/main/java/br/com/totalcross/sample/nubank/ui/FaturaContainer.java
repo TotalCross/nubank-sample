@@ -1,13 +1,11 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
-import totalcross.io.IOException;
+import br.com.totalcross.sample.nubank.util.NubankImages;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
 import totalcross.ui.font.Font;
-import totalcross.ui.image.Image;
-import totalcross.ui.image.ImageException;
 
 public class FaturaContainer extends Container {
 	private ImageControl cartao, cart, seta;
