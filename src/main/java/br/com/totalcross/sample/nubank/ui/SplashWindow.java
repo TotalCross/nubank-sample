@@ -26,7 +26,7 @@ public class SplashWindow extends Window {
 		back.strechImage = true;
 		add(back, LEFT, TOP, FILL, FILL);
 
-		logo = new ImageControl(NubankImages.ic_adaptive_launcher_shell_background_circ);
+		logo = new ImageControl(NubankImages.logo_branco);
 		logo.scaleToFit = true;
 		logo.centerImage = true;
 		logo.transparentBackground = true;

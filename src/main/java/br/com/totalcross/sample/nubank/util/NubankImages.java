@@ -10,9 +10,10 @@ public class NubankImages {
 	fundo2, fundo3, ic_adaptive_launcher_shell_background_retang, ic_adaptive_launcher_shell_background_circ,
 	ic_docs_front_purpleheart, icone_adicionar, icone_dinheiro_cobrar, icone_dinheiro_down,
 	icone_dinheiro_up, logo_nubank, logo_nubank_branca, nubank_logo_retang, nubank_logo_circ,
-	presente_icone, slider_next;
+	presente_icone, slider_next, logo_branco;
 	public static void loadImages(int fmH) {
 	      try {
+	    	logo_branco= new Image("images/nubank-branco.png");
 			addperson = new Image("images/addperson.png");
 			cart = new Image("images/cart.png");
 			cartao = new Image("images/cartao.png");
