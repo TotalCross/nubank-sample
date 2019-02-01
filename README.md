@@ -10,7 +10,7 @@ See the official [TotalCross website](http://www.totalcross.com).
 
 ## Getting Started
 
-- Follow the [Getting Started guide](http://www.totalcross.com/documentation/gettingstarted.html) to install TotalCross.
+- Follow the [Getting Started guide](https://totalcross.com/documentation/en/api/en/gettingstarted/index.html) to install TotalCross.
 
 ## Need Help?
 
@@ -19,10 +19,10 @@ See the official [TotalCross website](http://www.totalcross.com).
 
 ## Documentation
 
-[The TotalCross Companion](http://www.totalcross.com/documentation/companion.html) is very comprehensive and covers the following topics:
-- How to [build and deploy your first application](http://www.totalcross.com/documentation/companion.html#toc-Chapter-3).
-- [Installing](http://www.totalcross.com/documentation/companion.html#toc-Chapter-6) your application.
-- TotalCross' [user interface](http://www.totalcross.com/documentation/companion.html#toc-Part-II).
+[The TotalCross Companion](https://totalcross.com/pt/docs-pt/) is very comprehensive and covers the following topics:
+- How to [build and deploy your first application](https://totalcross.com/documentation/en/api/en/gettingstarted/index.html).
+- [Installing](https://totalcross.com/documentation/pt/installation/index.html) your application.
+- TotalCross' [user interface](https://totalcross.com/documentation/pt/components/AccordionContainer.php).
 
 ## Opening Issues
 
