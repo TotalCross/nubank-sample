@@ -14,8 +14,8 @@ See the official [TotalCross website](http://www.totalcross.com).
 
 ## Need Help?
 
-- Ask for feature request or vote for existing ones on [GitLab](https://gitlab.com/totalcross/TotalCross/issues), remember to tag it with `feature`
-- Found a bug? Please [open an issue](#opening-issues)
+-Ask for feature request or vote for existing ones on GitLab <a href="https://gitlab.com/totalcross/TotalCross/issues" target="_blank">The TotalCross Companion</a> remember to tag it with `feature`
+-Found a bug? Please open an <a href="#opening-issues" target="_blank">issue</a>
 
 ## Documentation
 
