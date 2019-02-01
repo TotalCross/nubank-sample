@@ -6,16 +6,16 @@ Sample app to show how to create a Rich UI/UX using TotalCross. We are simulatio
 
 ## Introduction
 
-See the official [TotalCross website](http://www.totalcross.com).
+See the official <a href="http://www.totalcross.com" target="_blank">TotalCross website</a>
 
 ## Getting Started
 
-- Follow the [Getting Started guide](https://totalcross.com/documentation/en/api/en/gettingstarted/index.html) to install TotalCross.
+- Follow the <a href="https://totalcross.com/documentation/en/api/en/gettingstarted/index.html" target="_blank">Getting Started guide</a> to install TotalCross.
 
 ## Need Help?
 
--Ask for feature request or vote for existing ones on GitLab <a href="https://gitlab.com/totalcross/TotalCross/issues" target="_blank">The TotalCross Companion</a> remember to tag it with `feature`
--Found a bug? Please open an <a href="#opening-issues" target="_blank">issue</a>
+- Ask for feature request or vote for existing ones on GitLab <a href="https://gitlab.com/totalcross/TotalCross/issues" target="_blank">The TotalCross Companion</a> remember to tag it with `feature`
+- Found a bug? Please open an <a href="#opening-issues" target="_blank">issue</a>
 
 ## Documentation
 
