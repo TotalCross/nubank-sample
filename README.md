@@ -2,6 +2,10 @@
 Sample app to show how to create a Rich UI/UX using TotalCross. We are simulation a great brazilian app called Nubank (just mockups).
 
 **To see the comparative images between the original Nubank interface and the one made with TotalCross**, just enter the *'Comparative Images' folder in this project.*
+
+![Nubank](https://github.com/TotalCross/nubank_sample/blob/master/Comparative%20Images/tela-04-nubank.png)
+![Nubank](https://github.com/TotalCross/nubank_sample/blob/master/Comparative%20Images/tela-03-nubank-.png)
+
 ## Introduction
 
 See the official [TotalCross website](http://www.totalcross.com).
