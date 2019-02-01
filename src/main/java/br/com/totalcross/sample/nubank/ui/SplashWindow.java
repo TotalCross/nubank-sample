@@ -34,8 +34,6 @@ public class SplashWindow extends Window {
 
 		FadeAnimation.create(logo, true, null, 3000)
 				.then(FadeAnimation.create(logo, false, this::onAnimationFinished, 3000)).start();
-
-		
 	}
 
 	public void onAnimationFinished(ControlAnimation anim) {
