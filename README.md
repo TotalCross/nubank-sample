@@ -1,6 +1,10 @@
 # nubank_sample
 Sample app to show how to create a Rich UI/UX using TotalCross. We are simulation a great brazilian app called Nubank (just mockups).
 
+Nubank is a pioneering Brazilian startup in the financial services segment, acting as a credit card operator and digital bank with operations in Brazil.
+
+With a strong visual identity that enchants its customers, being a big case of the importance of a flashy user interface, TotalCross asked the following question: *"What if Nubank was developed with TotalCross?"* and so we show the result, **seeing how easy and beautiful your mobile app made with Java and TotalCrosss can be!**
+
 ![Nubank](https://github.com/TotalCross/nubank_sample/blob/master/Comparative%20Images/tela-04-nubank.png)
 ![Nubank](https://github.com/TotalCross/nubank_sample/blob/master/Comparative%20Images/tela-03-nubank-.png)
 
