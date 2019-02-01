@@ -17,7 +17,12 @@ See the official [TotalCross website](http://www.totalcross.com).
 - Ask for feature request or vote for existing ones on [GitLab](https://gitlab.com/totalcross/TotalCross/issues), remember to tag it with `feature`
 - Found a bug? Please [open an issue](#opening-issues)
 
+## Documentation
 
+<a href="https://totalcross.com/pt/docs-pt/" target="_blank">The TotalCross Companion</a> is very comprehensive and covers the following topics:
+- How to <a href="https://totalcross.com/documentation/en/api/en/gettingstarted/index.html" target="_blank">build and deploy your first application</a>
+- <a href="https://totalcross.com/documentation/pt/installation/index.html" target="_blank">Installing</a> your application
+- <a href="https://totalcross.com/documentation/pt/components/AccordionContainer.php" target="_blank">user interface</a>
 
 ## Opening Issues
 
