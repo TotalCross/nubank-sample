@@ -8,7 +8,5 @@ public class NubankApplication {
 		// TODO Auto-generated method stub
 		//TotalCrossApplication.run(Nubank.class, "/scr", "1125x2304", "/scale", "0.33", "/fontsize", "14", "/r","placeholder");
 		TotalCrossApplication.run(Nubank.class,"/scr","360x640","/r","placeholder");
-
 	}
-
 }
