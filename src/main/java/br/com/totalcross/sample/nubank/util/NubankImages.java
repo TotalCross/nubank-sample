@@ -5,15 +5,18 @@ import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
 public class NubankImages {
-	private NubankImages() {}
-	public static Image addperson, cart, cartao, circulo_branco, circulo_cinza, dollar, fundo, 
-	fundo2, fundo3, ic_adaptive_launcher_shell_background_retang, ic_adaptive_launcher_shell_background_circ,
-	ic_docs_front_purpleheart, icone_adicionar, icone_dinheiro_cobrar, icone_dinheiro_down,
-	icone_dinheiro_up, logo_nubank, logo_nubank_branca, nubank_logo_retang, nubank_logo_circ,
-	presente_icone, slider_next, logo_branco;
+	private NubankImages() {
+	}
+
+	public static Image addperson, cart, cartao, circulo_branco, circulo_cinza, dollar, fundo, fundo2, fundo3,
+			ic_adaptive_launcher_shell_background_retang, ic_adaptive_launcher_shell_background_circ,
+			ic_docs_front_purpleheart, icone_adicionar, icone_dinheiro_cobrar, icone_dinheiro_down, icone_dinheiro_up,
+			logo_nubank, logo_nubank_branca, nubank_logo_retang, nubank_logo_circ, presente_icone, slider_next,
+			logo_branco;
+
 	public static void loadImages(int fmH) {
-	      try {
-	    	logo_branco= new Image("images/nubank-branco.png");
+		try {
+			logo_branco = new Image("images/nubank-branco.png");
 			addperson = new Image("images/addperson.png");
 			cart = new Image("images/cart.png");
 			cartao = new Image("images/cartao.png");
@@ -23,7 +26,8 @@ public class NubankImages {
 			fundo = new Image("images/fundo.png");
 			fundo2 = new Image("images/fundo2.png");
 			fundo3 = new Image("images/fundo3.png");
-			ic_adaptive_launcher_shell_background_retang = new Image("images/ic_adaptive_launcher_shell_background.png");
+			ic_adaptive_launcher_shell_background_retang = new Image(
+					"images/ic_adaptive_launcher_shell_background.png");
 			ic_adaptive_launcher_shell_background_circ = new Image("images/ic_adaptive_launcher_shell_round.png");
 			ic_docs_front_purpleheart = new Image("images/ic_docs_front_purpleheart.png");
 			icone_adicionar = new Image("images/icone_adicionar-.png");

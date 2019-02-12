@@ -11,7 +11,6 @@ import totalcross.ui.MainWindow;
 import totalcross.ui.SlidingWindow;
 import totalcross.ui.font.Font;
 
-
 public class Inicial extends Container {
 	private Container back;
 	private ImageControl girl, logon;
@@ -24,7 +23,6 @@ public class Inicial extends Container {
 		back = new Container();
 		add(back, LEFT, TOP, FILL, FILL);
 
-		
 		girl = new ImageControl(NubankImages.fundo3);
 		girl.scaleToFit = true;
 		girl.centerImage = true;
@@ -67,8 +65,6 @@ public class Inicial extends Container {
 			SlidingWindow info = new CPFMaterialWindow();
 			info.popup();
 		});
-
-		
 
 	}
 }

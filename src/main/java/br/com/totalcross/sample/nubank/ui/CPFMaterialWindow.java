@@ -32,7 +32,7 @@ public class CPFMaterialWindow extends SlidingWindow {
 	private Bar bar;
 	private static Edit maskedEdit;
 	private static Button btnOutlined;
-	
+
 	private SideMenuContainer findSideMenu(Container c) {
 		if (c instanceof SideMenuContainer) {
 			return (SideMenuContainer) c;
@@ -169,21 +169,21 @@ public class CPFMaterialWindow extends SlidingWindow {
 			}).start();
 		}
 	}
-	
+
 	private static void doInsert() throws SQLException, InvalidDateException {
-		if (maskedEdit.getTextWithoutMask() == ""){
-			MessageBox mb = new MessageBox("Atenção!","Preencha o campo CPF");
+		if (maskedEdit.getTextWithoutMask() == "") {
+			MessageBox mb = new MessageBox("Atenção!", "Preencha o campo CPF");
 			mb.setBackForeColors(Color.WHITE, Color.BLACK);
 			mb.popup();
 
-		}else {
+		} else {
 			// simple example of how you can insert data into SQLite..
 			String cpf = maskedEdit.getTextWithoutMask();
 
 			Statement st = dbcon.createStatement();
-			st.executeUpdate("insert into person values('" + cpf  + "')");
+			st.executeUpdate("insert into person values('" + cpf + "')");
 			st.close();
-			MessageBox mb = new MessageBox("Atenção!","CPF:" + cpf + " foi cadastrado com sucesso!");
+			MessageBox mb = new MessageBox("Atenção!", "CPF:" + cpf + " foi cadastrado com sucesso!");
 			mb.setBackForeColors(Color.WHITE, Color.BLACK);
 			mb.popup();
 		}

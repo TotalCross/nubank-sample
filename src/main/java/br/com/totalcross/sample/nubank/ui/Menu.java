@@ -14,7 +14,6 @@ import totalcross.ui.event.PenListener;
 import totalcross.ui.font.Font;
 import totalcross.ui.image.Image;
 
-
 public class Menu extends ScrollContainer {
 	private String[] tits = { "", "" };
 	private ImageControl background;
@@ -44,92 +43,90 @@ public class Menu extends ScrollContainer {
 
 		// Container do centro
 		// Container do centro
-				Container center = new Container();
-				add(center, LEFT + 100, CENTER - 180, FILL - 100, PARENTSIZE + 48);
+		Container center = new Container();
+		add(center, LEFT + 100, CENTER - 180, FILL - 100, PARENTSIZE + 48);
 
-				TabbedContainer tc = new TabbedContainer(tits);
-				center.add(tc, LEFT, CENTER, FILL, PARENTSIZE);
+		TabbedContainer tc = new TabbedContainer(tits);
+		center.add(tc, LEFT, CENTER, FILL, PARENTSIZE);
 
-				tc.setContainer(0, new FaturaContainer());
-				tc.setContainer(1, new PontosContainer());
+		tc.setContainer(0, new FaturaContainer());
+		tc.setContainer(1, new PontosContainer());
+		tc.setActiveTab(0);
+		tc.transparentBackground = true;
+
+		ImageControl b1 = new ImageControl(NubankImages.circulo_cinza);
+		b1.transparentBackground = true;
+		b1.centerImage = true;
+		b1.scaleToFit = true;
+
+		add(b1, CENTER - 20, AFTER + 10, PARENTSIZE + 2, PARENTSIZE + 2);
+
+		ImageControl b2 = new ImageControl(NubankImages.circulo_branco);
+		b2.transparentBackground = true;
+		b2.centerImage = true;
+		b2.scaleToFit = true;
+		b1.addPenListener(new PenListener() {
+
+			public void penUp(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				System.out.println("teste1");
 				tc.setActiveTab(0);
-				tc.transparentBackground = true;
+				b1.setImage(NubankImages.circulo_cinza);
+				b2.setImage(NubankImages.circulo_branco);
+			}
 
-			
-				ImageControl b1 = new ImageControl(NubankImages.circulo_cinza);
-				b1.transparentBackground = true;
-				b1.centerImage = true;
-				b1.scaleToFit = true;
-				
-				add(b1, CENTER - 20, AFTER + 10, PARENTSIZE + 2, PARENTSIZE + 2);			
+			public void penDragStart(DragEvent arg0) {
+				// TODO Auto-generated method stub
 
-				ImageControl b2 = new ImageControl(NubankImages.circulo_branco);
-				b2.transparentBackground = true;
-				b2.centerImage = true;
-				b2.scaleToFit = true;
-				b1.addPenListener(new PenListener() {
-					
-					public void penUp(PenEvent arg0) {
-						// TODO Auto-generated method stub
-						System.out.println("teste1");
-						tc.setActiveTab(0);
-						b1.setImage(NubankImages.circulo_cinza);
-						b2.setImage(NubankImages.circulo_branco);
-					}
-					
-					public void penDragStart(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDragEnd(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDrag(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDown(PenEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
-				
-				b2.addPenListener(new PenListener() {
-					
-					public void penUp(PenEvent arg0) {
-						// TODO Auto-generated method stub
-						System.out.println("teste2");
-						tc.setActiveTab(1);
-						b2.setImage(NubankImages.circulo_cinza);
-						b1.setImage(NubankImages.circulo_branco);
-					}
-					
-					public void penDragStart(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDragEnd(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDrag(DragEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-					
-					public void penDown(PenEvent arg0) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
-				add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
-				
+			}
+
+			public void penDragEnd(DragEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void penDrag(DragEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void penDown(PenEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
+		b2.addPenListener(new PenListener() {
+
+			public void penUp(PenEvent arg0) {
+				// TODO Auto-generated method stub
+				System.out.println("teste2");
+				tc.setActiveTab(1);
+				b2.setImage(NubankImages.circulo_cinza);
+				b1.setImage(NubankImages.circulo_branco);
+			}
+
+			public void penDragStart(DragEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void penDragEnd(DragEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void penDrag(DragEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void penDown(PenEvent arg0) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+		add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
 
 		// ScrollContainer
 		ScrollContainer sc = new ScrollContainer(true, false);
@@ -157,8 +154,6 @@ public class Menu extends ScrollContainer {
 
 		cd6 = new Card(depositar, "Outra \nopção");
 		sc.add(cd6, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
-
-		
 
 	}
 

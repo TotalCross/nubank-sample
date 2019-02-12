@@ -67,6 +67,5 @@ public class FaturaContainer extends Container {
 		seta.transparentBackground = true;
 		cinza.add(seta, RIGHT, CENTER, PARENTSIZE + 10, PARENTSIZE + 40);
 
-		
 	}
 }

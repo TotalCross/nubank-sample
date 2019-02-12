@@ -18,7 +18,7 @@ public class SplashWindow extends Window {
 	protected void onPopup() {
 		NubankImages.loadImages(fmH);
 		ImageControl logo, back;
-		
+
 		back = new ImageControl(NubankImages.ic_adaptive_launcher_shell_background_retang);
 		back.scaleToFit = true;
 		back.centerImage = true;
