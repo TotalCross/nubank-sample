@@ -8,6 +8,7 @@ import totalcross.ui.ImageControl;
 import totalcross.ui.font.Font;
 import totalcross.ui.gfx.Color;
 import totalcross.ui.image.Image;
+import totalcross.util.UnitsConverter;
 
 public class Card extends Container {
 	private Image img;
@@ -29,12 +30,12 @@ public class Card extends Container {
 		ic.transparentBackground = true;
 		ic.centerImage = true;
 		ic.scaleToFit = true;
-		add(ic, LEFT + 50, TOP + 50, PARENTSIZE + 28, PARENTSIZE + 28);
+		add(ic, LEFT + UnitsConverter.toPixels(DP + 17), TOP + UnitsConverter.toPixels(DP + 17), PARENTSIZE + 28, PARENTSIZE + 28);
 
 		lbl = new Label(txt);
 		lbl.transparentBackground = true;
 		lbl.setFont(Font.getFont("Lato Medium", false, this.getFont().size - 2));
 		lbl.setForeColor(Color.WHITE);
-		add(lbl, LEFT + 50, BOTTOM - 50);
+		add(lbl, LEFT + UnitsConverter.toPixels(DP + 17), BOTTOM - UnitsConverter.toPixels(DP + 17));
 	}
 }

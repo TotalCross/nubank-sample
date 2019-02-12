@@ -26,6 +26,7 @@ import totalcross.ui.gfx.Color;
 import totalcross.ui.icon.Icon;
 import totalcross.ui.icon.MaterialIcons;
 import totalcross.util.InvalidDateException;
+import totalcross.util.UnitsConverter;
 
 public class CPFMaterialWindow extends SlidingWindow {
 	private static Connection dbcon;
@@ -60,7 +61,7 @@ public class CPFMaterialWindow extends SlidingWindow {
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
 						cpfLabel.setFont(Font.getFont("Lato Light", false, this.getFont().size + 6));
 
-						add(cpfLabel, LEFT + 100, AFTER + 50, PREFERRED, Inicial.PREFERRED);
+						add(cpfLabel, LEFT + UnitsConverter.toPixels(DP + 33), AFTER + UnitsConverter.toPixels(DP + 17), PREFERRED, Inicial.PREFERRED);
 
 						maskedEdit = new Edit("999.999.999-99");
 						btnOutlined = new Button("Continuar", Button.BORDER_OUTLINED);
@@ -91,8 +92,8 @@ public class CPFMaterialWindow extends SlidingWindow {
 
 						btnOutlined.setBackForeColors(Color.getRGB(204, 204, 204), Color.WHITE);
 
-						add(maskedEdit, SAME, AFTER + 50, PREFERRED, Inicial.PREFERRED);
-						add(btnOutlined, LEFT, AFTER + 100, FILL, PREFERRED);
+						add(maskedEdit, SAME, AFTER + UnitsConverter.toPixels(DP + 17), PREFERRED, Inicial.PREFERRED);
+						add(btnOutlined, LEFT, AFTER + UnitsConverter.toPixels(DP + 33), FILL, PREFERRED);
 						btnOutlined.addPressListener((event) -> {
 							try {
 								doInsert();
