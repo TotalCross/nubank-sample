@@ -66,71 +66,43 @@ public class Menu extends ScrollContainer {
 		b2.centerImage = true;
 		b2.scaleToFit = true;
 		b1.addPenListener(new PenListener() {
-
 			public void penUp(PenEvent arg0) {
-				// TODO Auto-generated method stub
-				System.out.println("teste1");
 				tc.setActiveTab(0);
 				b1.setImage(NubankImages.circulo_cinza);
 				b2.setImage(NubankImages.circulo_branco);
 			}
 
-			public void penDragStart(DragEvent arg0) {
-				// TODO Auto-generated method stub
+			public void penDragStart(DragEvent arg0) { }
 
-			}
+			public void penDragEnd(DragEvent arg0) { }
 
-			public void penDragEnd(DragEvent arg0) {
-				// TODO Auto-generated method stub
+			public void penDrag(DragEvent arg0) { }
 
-			}
-
-			public void penDrag(DragEvent arg0) {
-				// TODO Auto-generated method stub
-
-			}
-
-			public void penDown(PenEvent arg0) {
-				// TODO Auto-generated method stub
-
-			}
+			public void penDown(PenEvent arg0) { }
 		});
 
 		b2.addPenListener(new PenListener() {
-
 			public void penUp(PenEvent arg0) {
-				// TODO Auto-generated method stub
-				System.out.println("teste2");
 				tc.setActiveTab(1);
 				b2.setImage(NubankImages.circulo_cinza);
 				b1.setImage(NubankImages.circulo_branco);
 			}
 
-			public void penDragStart(DragEvent arg0) {
-				// TODO Auto-generated method stub
+			public void penDragStart(DragEvent arg0) { }
 
-			}
+			public void penDragEnd(DragEvent arg0) { }
 
-			public void penDragEnd(DragEvent arg0) {
-				// TODO Auto-generated method stub
+			public void penDrag(DragEvent arg0) { }
 
-			}
-
-			public void penDrag(DragEvent arg0) {
-				// TODO Auto-generated method stub
-
-			}
-
-			public void penDown(PenEvent arg0) {
-				// TODO Auto-generated method stub
-
-			}
+			public void penDown(PenEvent arg0) { }
 		});
 		add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
 
 		// ScrollContainer
 		ScrollContainer sc = new ScrollContainer(true, false);
 		sc.transparentBackground = true;
+		sc.disableFlick();
+		sc.sbH.setVisible(false);
 		add(sc, LEFT + 100, BOTTOM - 100, FILL - 100, PARENTSIZE + 20);
 
 		Image add = NubankImages.icone_adicionar;
@@ -156,5 +128,4 @@ public class Menu extends ScrollContainer {
 		sc.add(cd6, AFTER + 25, TOP, PARENTSIZE + 38, FILL - 25);
 
 	}
-
 }

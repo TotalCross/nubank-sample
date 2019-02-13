@@ -31,7 +31,6 @@ public class CPFMaterialWindow extends MaterialWindow {
 				return new Container() {
 					@Override
 					public void initUI() {
-						int backcolor = getBackColor();
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
 						cpfLabel.setFont(Font.getFont("Lato Light", false, this.getFont().size + 6));
 

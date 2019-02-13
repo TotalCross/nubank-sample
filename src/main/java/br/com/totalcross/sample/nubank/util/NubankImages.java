@@ -41,7 +41,6 @@ public class NubankImages {
 			presente_icone = new Image("images/presente-icone.png");
 			slider_next = new Image("images/slider-next.png");
 		} catch (ImageException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
