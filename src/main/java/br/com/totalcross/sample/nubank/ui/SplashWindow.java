@@ -1,8 +1,7 @@
 package br.com.totalcross.sample.nubank.ui;
 
-import totalcross.io.IOException;
 import br.com.totalcross.sample.nubank.util.NubankImages;
-
+import totalcross.io.IOException;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Window;
 import totalcross.ui.anim.ControlAnimation;

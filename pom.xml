@@ -8,19 +8,18 @@
 	<name>Nubank</name>
 	<description>Prototype of Nubank Sample app</description>
 
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<totalcross.activation_key>PLACE_HOLDER</totalcross.activation_key>
+		<totalcross.activation_key>PUT_YOUR_KEY_HERE</totalcross.activation_key>
+		<totalcross.applecertificate>PATH_APPLE_CERTIFICATE</totalcross.applecertificate>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.totalcross</groupId>
 			<artifactId>totalcross-sdk</artifactId>
-			<version>5.0.0-RC2</version>
+			<version>5.0.0-RC3</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.xerial</groupId>
@@ -78,14 +77,14 @@
 								<argument>${project.build.directory}/${project.build.finalName}.${project.packaging}</argument>
 								<!-- <argument>-win32</argument> -->
 								<argument>-android</argument>
-								<!-- <argument>-ios</argument> -->
+								<argument>-ios</argument>
 								<argument>/n</argument>
 								<argument>Nubank</argument>
 								<argument>/p</argument>
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>
 								<argument>/m</argument>
-								<argument>IOS_CERTIFICATE_PATH</argument>
+								<argument>${totalcross.applecertificate}</argument>
 							</arguments>
 						</configuration>
 					</execution>

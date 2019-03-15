@@ -2,7 +2,6 @@ package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
 import br.com.totalcross.sample.nubank.util.NubankImages;
-
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
@@ -72,13 +71,17 @@ public class Menu extends ScrollContainer {
 				b2.setImage(NubankImages.circulo_branco);
 			}
 
-			public void penDragStart(DragEvent arg0) { }
+			public void penDragStart(DragEvent arg0) {
+			}
 
-			public void penDragEnd(DragEvent arg0) { }
+			public void penDragEnd(DragEvent arg0) {
+			}
 
-			public void penDrag(DragEvent arg0) { }
+			public void penDrag(DragEvent arg0) {
+			}
 
-			public void penDown(PenEvent arg0) { }
+			public void penDown(PenEvent arg0) {
+			}
 		});
 
 		b2.addPenListener(new PenListener() {
@@ -88,20 +91,24 @@ public class Menu extends ScrollContainer {
 				b1.setImage(NubankImages.circulo_branco);
 			}
 
-			public void penDragStart(DragEvent arg0) { }
+			public void penDragStart(DragEvent arg0) {
+			}
 
-			public void penDragEnd(DragEvent arg0) { }
+			public void penDragEnd(DragEvent arg0) {
+			}
 
-			public void penDrag(DragEvent arg0) { }
+			public void penDrag(DragEvent arg0) {
+			}
 
-			public void penDown(PenEvent arg0) { }
+			public void penDown(PenEvent arg0) {
+			}
 		});
 		add(b2, AFTER + 15, SAME, PARENTSIZE + 2, PARENTSIZE + 2);
 
 		// ScrollContainer
 		ScrollContainer sc = new ScrollContainer(true, false);
 		sc.transparentBackground = true;
-		sc.disableFlick();
+		// sc.disableFlick();
 		sc.sbH.setVisible(false);
 		add(sc, LEFT + 100, BOTTOM - 100, FILL - 100, PARENTSIZE + 20);
 

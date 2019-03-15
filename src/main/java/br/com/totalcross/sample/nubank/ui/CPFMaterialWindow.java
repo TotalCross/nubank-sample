@@ -24,6 +24,7 @@ public class CPFMaterialWindow extends MaterialWindow {
 	private static Connection dbcon;
 	private static Edit maskedEdit;
 	private static Button btnOutlined;
+
 	public CPFMaterialWindow() {
 		super(false, new Presenter() {
 			@Override
@@ -78,10 +79,10 @@ public class CPFMaterialWindow extends MaterialWindow {
 				};
 			}
 		});
-			
+
 		transparentBackground = true;
 		fadeOtherWindows = true;
-		
+
 		this.setBackColor(Color.getRGB(108, 37, 117));
 		this.setSlackSpace(100);
 	}

@@ -1,10 +1,9 @@
 package br.com.totalcross.sample.nubank.ui;
 
-import totalcross.ui.Container;
-import totalcross.ui.Label;
-
 import br.com.totalcross.sample.nubank.util.Colors;
+import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
+import totalcross.ui.Label;
 import totalcross.ui.font.Font;
 import totalcross.ui.gfx.Color;
 import totalcross.ui.image.Image;
