@@ -1,6 +1,7 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
+import br.com.totalcross.sample.nubank.util.Fonts;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
@@ -32,7 +33,7 @@ public class Card extends Container {
 
 		lbl = new Label(txt);
 		lbl.transparentBackground = true;
-		lbl.setFont(Font.getFont("Lato Medium", false, this.getFont().size - 2));
+		lbl.setFont(Fonts.latoMediumMinus2);
 		lbl.setForeColor(Color.WHITE);
 		add(lbl, LEFT + 50, BOTTOM - 50);
 	}

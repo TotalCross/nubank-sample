@@ -1,7 +1,8 @@
 package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
-import br.com.totalcross.sample.nubank.util.NubankImages;
+import br.com.totalcross.sample.nubank.util.Fonts;
+import br.com.totalcross.sample.nubank.util.Images;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
@@ -18,18 +19,18 @@ public class Inicial extends Container {
 	}
 
 	public void initUI() {
-		NubankImages.loadImages(fmH);
+		Images.loadImages(fmH);
 		back = new Container();
 		add(back, LEFT, TOP, FILL, FILL);
 
-		girl = new ImageControl(NubankImages.fundo3);
+		girl = new ImageControl(Images.fundo3);
 		girl.scaleToFit = true;
 		girl.centerImage = true;
 		girl.hwScale = true;
 		girl.strechImage = true;
 		back.add(girl, LEFT, TOP, FILL, FILL);
 
-		logon = new ImageControl(NubankImages.logo_nubank_branca);
+		logon = new ImageControl(Images.logo_nubank_branca);
 		logon.scaleToFit = true;
 		logon.transparentBackground = true;
 		back.add(logon, LEFT + 150, TOP + 80, PARENTSIZE + 30, PARENTSIZE + 20);
@@ -39,7 +40,7 @@ public class Inicial extends Container {
 		back.add(cont, LEFT + 150, BOTTOM, FILL - 150, PARENTSIZE + 50);
 
 		Label lbl = new Label("A forma mais \nsimples de lidar \ncom seus gastos.");
-		lbl.setFont(Font.getFont("Lato Bold", false, this.getFont().size + 6));
+		lbl.setFont(Fonts.latoBoldPlus8);
 		lbl.transparentBackground = true;
 		lbl.setForeColor(Colors.WHITE);
 		cont.add(lbl, LEFT, TOP + 15);

@@ -10,15 +10,13 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<totalcross.activation_key>PUT_YOUR_KEY_HERE</totalcross.activation_key>
-		<totalcross.applecertificate>PATH_APPLE_CERTIFICATE</totalcross.applecertificate>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.totalcross</groupId>
 			<artifactId>totalcross-sdk</artifactId>
-			<version>5.0.0-RC3</version>
+			<version>5.0.0-RC4</version>
 		</dependency>
 
 		<dependency>
@@ -52,11 +50,12 @@
 			<plugin>
 				<groupId>net.orfjackal.retrolambda</groupId>
 				<artifactId>retrolambda-maven-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>2.5.6</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>process-main</goal>
+							<goal>process-test</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -75,7 +74,7 @@
 							<mainClass>tc.Deploy</mainClass>
 							<arguments>
 								<argument>${project.build.directory}/${project.build.finalName}.${project.packaging}</argument>
-								<!-- <argument>-win32</argument> -->
+								<argument>-win32</argument>
 								<argument>-android</argument>
 								<argument>-ios</argument>
 								<argument>/n</argument>

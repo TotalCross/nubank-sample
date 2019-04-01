@@ -2,11 +2,8 @@ package br.com.totalcross.sample.nubank.ui;
 
 import java.sql.SQLException;
 
-import totalcross.sql.Connection;
-import totalcross.sql.DriverManager;
-import totalcross.sql.Statement;
-import totalcross.sys.Convert;
-import totalcross.sys.Settings;
+import br.com.totalcross.sample.nubank.dao.CPFDAO;
+import br.com.totalcross.sample.nubank.util.Fonts;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.Edit;
@@ -16,12 +13,11 @@ import totalcross.ui.Presenter;
 import totalcross.ui.dialog.MessageBox;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
-import totalcross.ui.font.Font;
 import totalcross.ui.gfx.Color;
 import totalcross.util.InvalidDateException;
 
 public class CPFMaterialWindow extends MaterialWindow {
-	private static Connection dbcon;
+
 	private static Edit maskedEdit;
 	private static Button btnOutlined;
 
@@ -33,7 +29,7 @@ public class CPFMaterialWindow extends MaterialWindow {
 					@Override
 					public void initUI() {
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
-						cpfLabel.setFont(Font.getFont("Lato Light", false, this.getFont().size + 6));
+						cpfLabel.setFont(Fonts.latoLightPlus6);
 
 						add(cpfLabel, LEFT + 100, AFTER + 50, PREFERRED, Inicial.PREFERRED);
 
@@ -87,20 +83,6 @@ public class CPFMaterialWindow extends MaterialWindow {
 		this.setSlackSpace(100);
 	}
 
-	@Override
-	public void initUI() {
-		try {
-			dbcon = DriverManager.getConnection("jdbc:sqlite:" + Convert.appendPath(Settings.appPath, "test.db"));
-			Statement st = dbcon.createStatement();
-			st.execute("create table if not exists person (cpf varchar)");
-			st.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		super.initUI();
-	}
-
 	private static void doInsert() throws SQLException, InvalidDateException {
 		if (maskedEdit.getTextWithoutMask() == "") {
 			MessageBox mb = new MessageBox("Atenção!", "Preencha o campo CPF");
@@ -108,12 +90,11 @@ public class CPFMaterialWindow extends MaterialWindow {
 			mb.popup();
 
 		} else {
+
 			// simple example of how you can insert data into SQLite..
 			String cpf = maskedEdit.getTextWithoutMask();
+			new CPFDAO().insertCPF(cpf);
 
-			Statement st = dbcon.createStatement();
-			st.executeUpdate("insert into person values('" + cpf + "')");
-			st.close();
 			MessageBox mb = new MessageBox("Atenção!", "CPF:" + cpf + " foi cadastrado com sucesso!");
 			mb.setBackForeColors(Color.WHITE, Color.BLACK);
 			mb.popup();

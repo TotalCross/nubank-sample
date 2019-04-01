@@ -1,6 +1,6 @@
 package br.com.totalcross.sample.nubank.ui;
 
-import br.com.totalcross.sample.nubank.util.NubankImages;
+import br.com.totalcross.sample.nubank.util.Images;
 import totalcross.io.IOException;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Window;
@@ -15,17 +15,17 @@ public class SplashWindow extends Window {
 	}
 
 	protected void onPopup() {
-		NubankImages.loadImages(fmH);
+		Images.loadImages(fmH);
 		ImageControl logo, back;
 
-		back = new ImageControl(NubankImages.ic_adaptive_launcher_shell_background_retang);
+		back = new ImageControl(Images.ic_adaptive_launcher_shell_background_retang);
 		back.scaleToFit = true;
 		back.centerImage = true;
 		back.hwScale = true;
 		back.strechImage = true;
 		add(back, LEFT, TOP, FILL, FILL);
 
-		logo = new ImageControl(NubankImages.logo_branco);
+		logo = new ImageControl(Images.logo_branco);
 		logo.scaleToFit = true;
 		logo.centerImage = true;
 		logo.transparentBackground = true;
