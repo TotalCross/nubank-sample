@@ -3,6 +3,7 @@ package br.com.totalcross.sample.nubank.ui;
 import java.sql.SQLException;
 
 import br.com.totalcross.sample.nubank.dao.CPFDAO;
+import br.com.totalcross.sample.nubank.util.Colors;
 import br.com.totalcross.sample.nubank.util.Fonts;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
@@ -13,7 +14,6 @@ import totalcross.ui.Presenter;
 import totalcross.ui.dialog.MessageBox;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
-import totalcross.ui.gfx.Color;
 import totalcross.util.InvalidDateException;
 
 public class CPFMaterialWindow extends MaterialWindow {
@@ -47,11 +47,11 @@ public class CPFMaterialWindow extends MaterialWindow {
 								if (event.target == maskedEdit
 										&& maskedEdit.getText().length() == "999.999.999-99".length()) {
 									btnOutlined.setEnabled(true);
-									btnOutlined.setForeColor(Color.BLUE);
+									btnOutlined.setForeColor(Colors.BLUE);
 									btnOutlined.repaintNow();
 								} else {
 									btnOutlined.setEnabled(false);
-									btnOutlined.setForeColor(Color.getRGB(204, 204, 204));
+									btnOutlined.setForeColor(Colors.GRAY);
 									btnOutlined.repaintNow();
 								}
 
@@ -60,7 +60,7 @@ public class CPFMaterialWindow extends MaterialWindow {
 
 						btnOutlined.setEnabled(false);
 
-						btnOutlined.setBackForeColors(Color.getRGB(204, 204, 204), Color.WHITE);
+						btnOutlined.setBackForeColors(Colors.GRAY, Colors.WHITE);
 
 						add(maskedEdit, SAME, AFTER + 50, PREFERRED, Inicial.PREFERRED);
 						add(btnOutlined, LEFT, AFTER + 100, FILL, PREFERRED);
@@ -79,14 +79,14 @@ public class CPFMaterialWindow extends MaterialWindow {
 		transparentBackground = true;
 		fadeOtherWindows = true;
 
-		this.setBackColor(Color.getRGB(108, 37, 117));
+		this.setBackColor(Colors.PURPLE);
 		this.setSlackSpace(100);
 	}
 
 	private static void doInsert() throws SQLException, InvalidDateException {
 		if (maskedEdit.getTextWithoutMask() == "") {
 			MessageBox mb = new MessageBox("Atenção!", "Preencha o campo CPF");
-			mb.setBackForeColors(Color.WHITE, Color.BLACK);
+			mb.setBackForeColors(Colors.WHITE, Colors.BLACK);
 			mb.popup();
 
 		} else {
@@ -96,7 +96,7 @@ public class CPFMaterialWindow extends MaterialWindow {
 			new CPFDAO().insertCPF(cpf);
 
 			MessageBox mb = new MessageBox("Atenção!", "CPF:" + cpf + " foi cadastrado com sucesso!");
-			mb.setBackForeColors(Color.WHITE, Color.BLACK);
+			mb.setBackForeColors(Colors.WHITE, Colors.BLACK);
 			mb.popup();
 		}
 	}

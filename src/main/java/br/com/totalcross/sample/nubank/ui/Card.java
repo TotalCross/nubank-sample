@@ -5,8 +5,6 @@ import br.com.totalcross.sample.nubank.util.Fonts;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
-import totalcross.ui.font.Font;
-import totalcross.ui.gfx.Color;
 import totalcross.ui.image.Image;
 
 public class Card extends Container {
@@ -34,7 +32,7 @@ public class Card extends Container {
 		lbl = new Label(txt);
 		lbl.transparentBackground = true;
 		lbl.setFont(Fonts.latoMediumMinus2);
-		lbl.setForeColor(Color.WHITE);
+		lbl.setForeColor(Colors.WHITE);
 		add(lbl, LEFT + 50, BOTTOM - 50);
 	}
 }
