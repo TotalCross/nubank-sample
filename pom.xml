@@ -10,13 +10,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<totalcross.activation_key>place holder</totalcross.activation_key>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.totalcross</groupId>
 			<artifactId>totalcross-sdk</artifactId>
-			<version>5.0.0-RC4</version>
+			<version>5.0.0</version>
 		</dependency>
 
 		<dependency>

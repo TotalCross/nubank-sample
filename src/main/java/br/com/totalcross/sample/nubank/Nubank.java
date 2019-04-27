@@ -1,6 +1,7 @@
 package br.com.totalcross.sample.nubank;
 
 import br.com.totalcross.sample.nubank.ui.Inicial;
+import br.com.totalcross.sample.nubank.ui.Menu;
 import br.com.totalcross.sample.nubank.ui.SplashWindow;
 import br.com.totalcross.sample.nubank.util.Fonts;
 import totalcross.io.IOException;
@@ -11,8 +12,7 @@ import totalcross.ui.image.ImageException;
 
 public class Nubank extends MainWindow {
 	public Nubank() {
-		setUIStyle(Settings.Material);
-		Settings.uiAdjustmentsBasedOnFontHeight = true;
+		setUIStyle(Settings.MATERIAL_UI);
 		setDefaultFont(Font.getFont(Fonts.FONT_DEFAULT_SIZE));
 	}
 
@@ -29,6 +29,7 @@ public class Nubank extends MainWindow {
 			sp = new SplashWindow();
 			sp.popupNonBlocking();
 			swap(inicial);
+
 		} catch (IOException | ImageException e) {
 			e.printStackTrace();
 		}

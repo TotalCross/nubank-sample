@@ -2,6 +2,7 @@ package br.com.totalcross.sample.nubank.ui;
 
 import br.com.totalcross.sample.nubank.util.Colors;
 import br.com.totalcross.sample.nubank.util.Fonts;
+import br.com.totalcross.sample.nubank.util.MaterialConstants;
 import totalcross.ui.Container;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
@@ -27,12 +28,13 @@ public class Card extends Container {
 		ic.transparentBackground = true;
 		ic.centerImage = true;
 		ic.scaleToFit = true;
-		add(ic, LEFT + 50, TOP + 50, PARENTSIZE + 28, PARENTSIZE + 28);
+		add(ic, LEFT + MaterialConstants.BORDER_SPACING, TOP + MaterialConstants.BORDER_SPACING, PARENTSIZE + 28,
+				PARENTSIZE + 28);
 
 		lbl = new Label(txt);
 		lbl.transparentBackground = true;
 		lbl.setFont(Fonts.latoMediumMinus2);
 		lbl.setForeColor(Colors.WHITE);
-		add(lbl, LEFT + 50, BOTTOM - 50);
+		add(lbl, LEFT + MaterialConstants.BORDER_SPACING, BOTTOM - MaterialConstants.BORDER_SPACING);
 	}
 }

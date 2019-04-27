@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import br.com.totalcross.sample.nubank.dao.CPFDAO;
 import br.com.totalcross.sample.nubank.util.Colors;
 import br.com.totalcross.sample.nubank.util.Fonts;
+import br.com.totalcross.sample.nubank.util.MaterialConstants;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
 import totalcross.ui.Edit;
@@ -31,7 +32,8 @@ public class CPFMaterialWindow extends MaterialWindow {
 						Label cpfLabel = new Label("Para acessar o app digite o \nseu CPF:");
 						cpfLabel.setFont(Fonts.latoLightPlus6);
 
-						add(cpfLabel, LEFT + 100, AFTER + 50, PREFERRED, Inicial.PREFERRED);
+						add(cpfLabel, LEFT + MaterialConstants.BORDER_SPACING,
+								AFTER + MaterialConstants.COMPONENT_SPACING, PREFERRED, Inicial.PREFERRED);
 
 						maskedEdit = new Edit("999.999.999-99");
 						btnOutlined = new Button("Continuar", Button.BORDER_OUTLINED);
@@ -59,11 +61,11 @@ public class CPFMaterialWindow extends MaterialWindow {
 						});
 
 						btnOutlined.setEnabled(false);
-
 						btnOutlined.setBackForeColors(Colors.GRAY, Colors.WHITE);
 
-						add(maskedEdit, SAME, AFTER + 50, PREFERRED, Inicial.PREFERRED);
-						add(btnOutlined, LEFT, AFTER + 100, FILL, PREFERRED);
+						add(maskedEdit, SAME, AFTER + MaterialConstants.COMPONENT_SPACING,
+								FILL - MaterialConstants.BORDER_SPACING, PREFERRED);
+						add(btnOutlined, LEFT, AFTER + MaterialConstants.COMPONENT_SPACING, FILL, PREFERRED);
 						btnOutlined.addPressListener((event) -> {
 							try {
 								doInsert();
