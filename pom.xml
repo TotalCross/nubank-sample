@@ -11,6 +11,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<totalcross.activation_key>place holder</totalcross.activation_key>
+		<totalcross.applecertificate>apple certificate here</totalcross.applecertificate>
 	</properties>
 
 	<dependencies>
@@ -77,14 +78,13 @@
 								<argument>${project.build.directory}/${project.build.finalName}.${project.packaging}</argument>
 								<argument>-win32</argument>
 								<argument>-android</argument>
-								<argument>-ios</argument>
+								<!-- <argument>-ios</argument> -->
 								<argument>/n</argument>
 								<argument>Nubank</argument>
 								<argument>/p</argument>
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>
-								<argument>/m</argument>
-								<argument>${totalcross.applecertificate}</argument>
+								<!--<argument>/m</argument> <argument>${totalcross.applecertificate}</argument> -->
 							</arguments>
 						</configuration>
 					</execution>
