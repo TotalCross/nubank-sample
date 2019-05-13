@@ -14,7 +14,7 @@ See the official <a href="http://www.totalcross.com" target="_blank">TotalCross 
 
 ## Getting Started
 
-- Follow the <a href="https://totalcross.com/documentation/en/api/en/gettingstarted/index.html" target="_blank">Getting Started guide</a> to install TotalCross.
+- Follow the <a href="https://totalcross.gitbook.io/playbook/learn-totalcross/getting-started" target="_blank">Getting Started guide</a> to install TotalCross.
 
 ## Need Help?
 
@@ -23,10 +23,10 @@ See the official <a href="http://www.totalcross.com" target="_blank">TotalCross 
 
 ## Documentation
 
-<a href="https://totalcross.com/pt/docs-pt/" target="_blank">The TotalCross Companion</a> is very comprehensive and covers the following topics:
-- How to <a href="https://totalcross.com/documentation/en/api/en/gettingstarted/index.html" target="_blank">build and deploy your first application</a>
-- <a href="https://totalcross.com/documentation/pt/installation/index.html" target="_blank">Installing</a> your application
-- <a href="https://totalcross.com/documentation/pt/components/AccordionContainer.php" target="_blank">user interface</a>
+<a href="https://totalcross.gitbook.io/playbook" target="_blank">The TotalCross Playbook</a> is very comprehensive and covers the following topics:
+- How to <a href="https://totalcross.gitbook.io/playbook/learn-totalcross/getting-started" target="_blank">Creating a complete application with TotalCross</a>
+-<a href="https://totalcross.gitbook.io/playbook/guideline/suggested-architecture" target="_blank"> Guide to app architecture</a>
+- <a href="https://totalcross.com/documentation/pt/components/AccordionContainer.php" target="_blank">User interface</a>
 
 ## Opening Issues
 
