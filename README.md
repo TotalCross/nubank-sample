@@ -23,8 +23,6 @@ See the official <a href="http://www.totalcross.com" target="_blank">TotalCross 
 
 ## Documentation
 
-## Documentation
-
 <a href="https://totalcross.gitbook.io/playbook" target="_blank">The TotalCross Playbook</a> is very comprehensive and covers the following topics:
 - <a href="https://totalcross.gitbook.io/playbook/learn-totalcross/getting-started" target="_blank">Creating a complete application with TotalCross</a>
 - <a href="https://totalcross.gitbook.io/playbook/guideline/suggested-architecture" target="_blank"> Guide to app architecture</a>
