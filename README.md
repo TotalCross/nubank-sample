@@ -1,4 +1,4 @@
-# nubank_sample
+# nubank-sample
 Sample app to show how to create a Rich UI/UX using TotalCross. We are simulation a great brazilian app called Nubank (just mockups).
 
 Nubank is a pioneering Brazilian startup in the financial services segment, acting as a credit card operator and digital bank with operations in Brazil.
